@@ -14,8 +14,8 @@ if output_path.exists() and output_path.is_dir():
     shutil.rmtree(output_path)
 output_path.mkdir(exist_ok=True)
 
-# Copy all of the .js and .css files
-for file_extension in ["*.css", "*.js"]:
+# Copy all of the .js and .css files (and fonts)
+for file_extension in ["*.css", "*.js", "*.ttf"]:
     for file_path in source_path.glob(file_extension):
         shutil.copy(file_path, output_path / file_path.name)
 
