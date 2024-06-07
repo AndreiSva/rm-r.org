@@ -12,8 +12,6 @@ from pathlib import Path
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-
-
 output_path = Path("./build")
 source_path = Path("./src")
 
@@ -26,7 +24,7 @@ def clean_build_directory():
     output_path.mkdir(exist_ok=True)
 
 def copy_static_files():
-    for file_extension in ["*.css", "*.js", "*.ttf"]:
+    for file_extension in ["*.css", "*.js", "*.ttf", "*.ico", "*.png", "*.jpg", "*.webp"]:
         for file_path in source_path.glob(file_extension):
             shutil.copy(file_path, output_path / file_path.name)
 
@@ -60,10 +58,12 @@ def convert_markdown_to_html(path, template):
     destdir.mkdir(parents=True, exist_ok=True)
 
     with open(destdir / (path.stem + ".html"), "w") as f:
+        # metadata prefixed with "html" comes from here
         data = {
             "html_body": content_html,
             "html_year": datetime.date.today().year
         }
+
         data.update(meta)
         f.write(template.render(data))
 

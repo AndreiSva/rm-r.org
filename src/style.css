@@ -1,0 +1,113 @@
+ @font-face { font-family: Play; src: url("Play-Regular.ttf"); } 
+
+:root {
+	--bg: #00d165;
+	--fg: black;
+	--hl: #001b75;
+}
+
+* {
+	font-family: "Play", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	color: var(--fg);
+}
+
+h1 {
+	text-align: center;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+p, a {
+	font-size: 1.1rem;
+}
+
+h1:hover::before, h2:hover::before {
+	content: "> ";
+}
+
+h3::before {
+	content: "# ";
+}
+
+a {
+	color: var(--fg);
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+a:hover {
+	font-style: italic;
+}
+
+nav {
+	margin: auto;
+	max-width: 800px;
+	text-align: center;
+	a {
+		margin-right: 30px;
+	}
+
+	a::before {
+		content: "[ ";
+	}
+
+	a::after {
+		content: " ]";
+	}
+}
+
+body {
+	background-color: var(--bg);
+	display: flex;
+	flex-direction: column;
+	justify-self: center;
+	align-items: center;
+}
+
+.doctitle {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.docsubtitle {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-style: italic;
+}
+
+.docauthor {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: bold;
+}
+
+
+.docmeta {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.content {
+	width: 0;
+	min-width: 100%;
+
+	p, li, ul, h2, h3 {
+		max-width: 800px;
+		margin: 0 auto 10px;
+	}
+}
+
+li {
+	list-style: square;
+}
+
+.footer {
+	flex-grow: 1;
+	bottom: 0;
+	padding: 30px;
+	text-align: center;
+}
