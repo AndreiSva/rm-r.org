@@ -1,4 +1,6 @@
-META: title=Introducing rm-r.org,subtitle=Making the World a Better Place,author=Andrei Sova
+META: title=Introducing rm-r.org \\
+      subtitle=Making the World a Better Place \\
+      author=Andrei Sova
 
 [rm-r.org](https://rm-r.org) in its essence is an internet club. However, to me it is more than that. [rm-r.org](https://rm-r.org) is the culmination of years of discussions, friends, and philosophy. It is my attempt to create a community of likeminded people who care about furthering the power of and the knowledge of humanity through technology and writing.
 
@@ -14,4 +16,4 @@ If you feel like you align with these values, you are welcome to send me an emai
 
 ## What you can do here
 
-You can take a look at my [harmless list](/harmless/index.html)
+You can take a look at the [harmless list](/harmless/index.html)

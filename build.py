@@ -34,14 +34,15 @@ def load_template():
 
 def parse_metadata(content_text):
     meta = {}
-    meta_pattern = re.compile(r"^META:\s*(.*)$")
+    meta_pattern = re.compile(r"^META:\s*((?:.*\\\n\s*)*.*)")
     lines = content_text.split("\n")
 
     first_line = lines[0]
     meta_match = meta_pattern.match(first_line)
+    print(meta_match)
     if meta_match:
         meta_text = meta_match.group(1)
-        for entry in meta_text.split(","):
+        for entry in meta_text.split("\\"):
             if "=" in entry:
                 metaname, metavalue = entry.split("=", 1)
                 meta[metaname.strip()] = metavalue.strip()
