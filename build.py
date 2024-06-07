@@ -34,11 +34,9 @@ def load_template():
 
 def parse_metadata(content_text):
     meta = {}
-    meta_pattern = re.compile(r"^META:\s*((?:.*\\\n\s*)*.*)")
-    lines = content_text.split("\n")
+    meta_pattern = re.compile(r"^META:\s*((?:.*\\\\\n\s*)*.*)")
 
-    first_line = lines[0]
-    meta_match = meta_pattern.match(first_line)
+    meta_match = meta_pattern.match(content_text)
     print(meta_match)
     if meta_match:
         meta_text = meta_match.group(1)
@@ -46,7 +44,11 @@ def parse_metadata(content_text):
             if "=" in entry:
                 metaname, metavalue = entry.split("=", 1)
                 meta[metaname.strip()] = metavalue.strip()
-        content_text = "\n".join(lines[1:])
+    
+    lines = content_text.split("\n")
+
+    if meta_match is not None:
+        content_text = "\n".join(lines[str(meta_match.group(1)).count("\n") + 1:])
     return meta, content_text
 
 def convert_markdown_to_html(path, template):
