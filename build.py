@@ -37,7 +37,6 @@ def parse_metadata(content_text):
     meta_pattern = re.compile(r"^META:\s*((?:.*\\\\\n\s*)*.*)")
 
     meta_match = meta_pattern.match(content_text)
-    print(meta_match)
     if meta_match:
         meta_text = meta_match.group(1)
         for entry in meta_text.split("\\"):

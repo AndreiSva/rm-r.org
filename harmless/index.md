@@ -1,6 +1,6 @@
-META: title=Harmless,subtitle=Things that I think are good, actually,author=Andrei Sova
+META: title=Harmless \\
+      subtitle=Things that I think are good, actually \\
+      author=Andrei Sova
 
-
-- Democracy
-This one is pretty self
+Yeah this page doesn't exist yet but hopefully it will soon.
 

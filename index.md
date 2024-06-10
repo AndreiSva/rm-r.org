@@ -1,8 +1,8 @@
 META: title=Introducing rm-r.org \\
-      subtitle=Making the World a Better Place \\
+      subtitle=(Hopefully) making the world a better place \\
       author=Andrei Sova
 
-[rm-r.org](https://rm-r.org) in its essence is an internet club. However, to me it is more than that. [rm-r.org](https://rm-r.org) is the culmination of years of discussions, friends, and philosophy. It is my attempt to create a community of likeminded people who care about furthering the power of and the knowledge of humanity through technology and writing.
+[rm-r.org](https://rm-r.org) is a collaborative website where people can write articles, build software, and discuss with other like-minded people.
 
 ## Values
 
