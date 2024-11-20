@@ -50,7 +50,7 @@ def parse_metadata(content_text):
         content_text = "\n".join(lines[str(meta_match.group(1)).count("\n") + 1:])
     return meta, content_text
 
-def convert_markdown_to_html(path, template):
+def convert_markdown_to_html(path, template):    
     with open(path, "r") as f:
         content_text = f.read()
 
@@ -59,15 +59,19 @@ def convert_markdown_to_html(path, template):
     destdir = output_path / path.parent
     destdir.mkdir(parents=True, exist_ok=True)
 
-    with open(destdir / (path.stem + ".html"), "w") as f:
-        # metadata prefixed with "html" comes from here
-        data = {
-            "html_body": content_html,
-            "html_year": datetime.date.today().year
-        }
+    # Set up the default metadata
+    defaults = {
+        "html_body": content_html,
+        "html_year": datetime.date.today().year,
+        "html_page": path.stem,
 
-        data.update(meta)
-        f.write(template.render(data))
+        # default to English
+        "lang": "en"
+    }
+
+    with open(destdir / (path.stem + ".html"), "w") as f:
+        meta.update(defaults)
+        f.write(template.render(meta))
 
 def main():
     try:
