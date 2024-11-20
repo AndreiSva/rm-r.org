@@ -1,6 +1,7 @@
-META: title=Vă Prezentăm: rm-r.org \\
-      subtitle=Transformând lumea într-un loc mai bun (sperăm noi)
-      author=Andrei Șova
+META: title=Vă Prezentăm rm-r.org \\
+      subtitle=Transformând lumea într-un loc mai bun (sperăm noi) \\
+      author=Andrei Șova \\
+      lang=ro
       
 [rm-r.org](https://rm-r.org/ro) este un sit web colaborativ în care oamenii pot
 să publice articole și programe, și să întâlnească oameni cu aceleași gusturi.
