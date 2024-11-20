@@ -1,6 +1,6 @@
 META: title=Introducing rm-r.org \\
       subtitle=(Hopefully) making the world a better place \\
-      author=Andrei Sova
+      author=Andrei Șova
 
 [rm-r.org](https://rm-r.org) is a collaborative website where people can write articles, build software, and discuss with other like-minded people.
 
@@ -17,3 +17,6 @@ If you feel like you align with these values, you are welcome to send me an emai
 ## What you can do here
 
 You can take a look at the [harmless list](/harmless/index.html)
+
+You can check out how to contribute to this site yourself by looking at [the
+about page](/about/index.html)
