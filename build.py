@@ -28,10 +28,6 @@ def copy_static_files():
         for file_path in source_path.glob(file_extension):
             shutil.copy(file_path, output_path / file_path.name)
 
-def load_template():
-    with open(source_path / "template.html", "r") as f:
-        return jinja2.Template(f.read())
-
 def parse_metadata(content_text):
     meta = {}
     meta_pattern = re.compile(r"^META:\s*((?:.*\\\\\n\s*)*.*)")
@@ -50,7 +46,7 @@ def parse_metadata(content_text):
         content_text = "\n".join(lines[str(meta_match.group(1)).count("\n") + 1:])
     return meta, content_text
 
-def convert_markdown_to_html(path, template):    
+def convert_markdown_to_html(path):
     with open(path, "r") as f:
         content_text = f.read()
 
@@ -65,26 +61,30 @@ def convert_markdown_to_html(path, template):
         "html_year": datetime.date.today().year,
         "html_page": path.stem,
 
-        # default to English
-        "lang": "en"
+        # default to the default English template
+        "template": "template.en.html",
     }
+
+    env = jinja2.Environment(loader=jinja2.FileSystemLoader("src"))
 
     with open(destdir / (path.stem + ".html"), "w") as f:
         page_meta.update(content_meta)
+
+        template = env.get_template(page_meta["template"])
+
         f.write(template.render(page_meta))
 
 def main():
-    try:
+    #try:
         clean_build_directory()
         copy_static_files()
-        template = load_template()
 
         for path in Path(".").rglob("*.md"):
-            convert_markdown_to_html(path, template)
+            convert_markdown_to_html(path)
             
         logging.info("Done.")
-    except Exception as e:
-        logging.error(f"Error: {e}")
+    #except Exception as e:
+    #    logging.error(f"Error: {e}")
 
 if __name__ == "__main__":
     main()

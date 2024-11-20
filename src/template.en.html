@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{% block lang %}en{% endblock %}">
+	<head>
+		<title>{{ title }} | rm-r.org</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="/style.css">
+	</head>
+	<body>
+	    <nav>
+        {% block navbar %}
+			<a href="/index.html">Home</a>
+			<a href="/about/index.html">About</a>
+			<a href="/members/index.html">Members</a>
+			<a href="/projects/index.html">Projects</a>
+			<a href="/articles/index.html">Writings</a>
+        {% endblock %}
+		</nav>
+		<div class="docmeta">
+			<h1 class="doctitle">{{ title }}</h1>
+			<p class="docsubtitle">{{ subtitle }}</p>
+			{% if author %}
+			<p class="docauthor">{{ author }}</p>
+			{% endif %}
+		</div>
+		<div class="content">
+		{{ html_body }}
+		</div>
+	</body>
+	<footer>
+		<p class="footer">&copy; {{ html_year }} rm-r.org </p>
+	</footer>
+</html>
