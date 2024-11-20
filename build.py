@@ -54,13 +54,13 @@ def convert_markdown_to_html(path, template):
     with open(path, "r") as f:
         content_text = f.read()
 
-    meta, content_text = parse_metadata(content_text)
+    content_meta, content_text = parse_metadata(content_text)
     content_html = marko.convert(content_text)
     destdir = output_path / path.parent
     destdir.mkdir(parents=True, exist_ok=True)
 
     # Set up the default metadata
-    defaults = {
+    page_meta = {
         "html_body": content_html,
         "html_year": datetime.date.today().year,
         "html_page": path.stem,
@@ -70,8 +70,8 @@ def convert_markdown_to_html(path, template):
     }
 
     with open(destdir / (path.stem + ".html"), "w") as f:
-        meta.update(defaults)
-        f.write(template.render(meta))
+        page_meta.update(content_meta)
+        f.write(template.render(page_meta))
 
 def main():
     try:
