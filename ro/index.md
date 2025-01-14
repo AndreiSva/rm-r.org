@@ -23,6 +23,6 @@ sunteți politicoși.
 
 Puteți citi lista mea de [lucruri favorabile](/ro/favorabile/index.html)
 
-De asemenea, puteți să vă interesați despre procesul de a contribui la situl
+De asemenea, puteți să vă interesați despre procesul de a contribui la saitul
 acesta prin cititul [paginii despre noi](/ro/detalii.html)
 
