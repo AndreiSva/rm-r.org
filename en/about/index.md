@@ -44,9 +44,12 @@ it will get published as long as it follows **the rules**.
 That being said, rm-r.org definitely does encourage collaboration. There are a
 few places where regular rm-r.org members habitually hang out in:
 
+- Matrix
+  - [#central:rm-r.org](https://matrix.to/#/#central:rm-r.org)
+
 - Discord Servers
   - Nullring Discord -- [link](https://discord.gg/pJU8dTKNWq)
-  
+
 - IRC channels
   - #nullring on nullring.xyz, port 6697 (less reliable)
 

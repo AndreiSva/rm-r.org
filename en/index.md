@@ -16,7 +16,7 @@ If you feel like you align with these values, you are welcome to send me an emai
 
 ## What you can do here
 
-You can take a look at the [harmless list](/harmless/index.html)
+You can take a look at the [harmless list](harmless/index.html)
 
 You can check out how to contribute to this site yourself by looking at [the
-about page](/about/index.html)
+about page](about/index.html)

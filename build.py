@@ -30,6 +30,8 @@ def copy_static_files():
 
 def parse_metadata(content_text):
     meta = {}
+
+    # thank you chatgpt for this regex
     meta_pattern = re.compile(r"^META:\s*((?:.*\\\\\n\s*)*.*)")
 
     meta_match = meta_pattern.match(content_text)
@@ -75,17 +77,13 @@ def convert_markdown_to_html(path):
         f.write(template.render(page_meta))
 
 def main():
-    #try:
-        clean_build_directory()
-        copy_static_files()
+    clean_build_directory()
+    copy_static_files()
 
-        for path in Path(".").rglob("*.md"):
-            convert_markdown_to_html(path)
+    for path in Path(".").rglob("*.md"):
+        convert_markdown_to_html(path)
             
-        logging.info("Done.")
-    #except Exception as e:
-    #    logging.error(f"Error: {e}")
-
+    logging.info("Done.")
 if __name__ == "__main__":
     main()
 
