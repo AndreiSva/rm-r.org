@@ -10,7 +10,7 @@ the content follows **the rules**.
 
 ## The Rules
 
-- Postings *must* follow the values outlined [here](/index.html)
+- Postings *must* follow the values outlined [here](/en/index.html)
 
 - Postings can be in any language
 
@@ -26,6 +26,12 @@ the content follows **the rules**.
 
 - Nothing illegal or dangerous
   - Will result in an instant ban and a report to law enforcement
+
+## Submitting articles
+
+Currently the only way to submit articles is through Github pull requests
+[here](https://github.com/AndreiSva/rm-r.org), though we hope to have other
+methods available in the future.
 
 ## Contact
 
